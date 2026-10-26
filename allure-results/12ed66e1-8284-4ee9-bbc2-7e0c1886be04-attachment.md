@@ -1,0 +1,55 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loginpom.spec.js >> using fixtures
+- Location: tests\loginpom.spec.js:21:1
+
+# Error details
+
+```
+Error: Test data not found for Tc001
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]: Swag Labs
+  - main [ref=e5]:
+    - form "Login" [ref=e9]:
+      - textbox "Username" [ref=e11]: locked_out_user
+      - textbox "Password" [ref=e15]: secret_sauce
+      - alert [ref=e19]:
+        - button "Dismiss error" [ref=e20] [cursor=pointer]
+        - text: "Epic sadface: Sorry, this user has been locked out."
+      - button "Login" [active] [ref=e23] [cursor=pointer]
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Accepted usernames are:" [level=4] [ref=e27]
+        - text: standard_userlocked_out_userproblem_userperformance_glitch_usererror_uservisual_user
+      - generic [ref=e28]:
+        - heading "Password for all users:" [level=4] [ref=e29]
+        - text: secret_sauce
+```
+
+# Test source
+
+```ts
+  1  | import loginData from '../testdata/Logindata.json' with { type: 'json' };
+  2  | 
+  3  | export function getTestData(tcId) {
+  4  |   const data = loginData.find(item => item.tcId === tcId);
+  5  | 
+  6  |   if (!data) {
+> 7  |     throw new Error(`Test data not found for ${tcId}`);
+     |           ^ Error: Test data not found for Tc001
+  8  |   }
+  9  | 
+  10 |   return data;
+  11 | }
+```

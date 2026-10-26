@@ -1,0 +1,44 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: api\methodchaining.spec.js >> method sequential chaining
+- Location: tests\api\methodchaining.spec.js:15:1
+
+# Error details
+
+```
+Error: can't resolve reference booking.schema.json from id #
+```
+
+# Test source
+
+```ts
+  1  | 
+  2  | import Ajv from 'ajv';
+  3  | 
+  4  | const ajv = new Ajv({
+  5  |     allErrors: true
+  6  | });
+  7  | 
+  8  | export function validateSchema(responseBody, schema) {
+> 9  |     const validate = ajv.compile(schema);
+     |                          ^ Error: can't resolve reference booking.schema.json from id #
+  10 |     const isValid = validate(responseBody);
+  11 | 
+  12 |     if (!isValid) {
+  13 |         throw new Error(
+  14 |             `Schema validation failed: ${
+  15 |                 ajv.errorsText(validate.errors)
+  16 |             }`
+  17 |         );
+  18 |     }
+  19 | 
+  20 |     return true;
+  21 | }
+  22 | 
+```

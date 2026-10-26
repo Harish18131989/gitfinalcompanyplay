@@ -1,0 +1,33 @@
+
+========== 1. AUTHENTICATION ==========
+Auth Status: 200
+Auth Response: { token: '9dc06471ccbad8d' }
+Token Generated: true
+
+========== 2. CREATE BOOKING ==========
+Request Payload: {
+  firstname: 'Harish',
+  lastname: 'Baskar',
+  totalprice: 1500,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-11-01', checkout: '2026-11-05' },
+  additionalneeds: 'Breakfast'
+}
+Create Status: 200
+Create Response: {
+  bookingid: 4450,
+  booking: {
+    firstname: 'Harish',
+    lastname: 'Baskar',
+    totalprice: 1500,
+    depositpaid: true,
+    bookingdates: { checkin: '2026-11-01', checkout: '2026-11-05' },
+    additionalneeds: 'Breakfast'
+  }
+}
+Extracted Booking ID: 4450
+
+========== 3. GET BOOKING ==========
+Booking ID Sent to GET: 4450
+GET Status: 404
+GET Response Body: Not Found

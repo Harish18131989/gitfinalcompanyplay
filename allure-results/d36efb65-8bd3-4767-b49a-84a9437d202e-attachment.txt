@@ -1,0 +1,35 @@
+
+========== 1. AUTHENTICATION ==========
+Auth Status: 200
+Auth Response: { token: 'a4d0d2151e390a3' }
+Token Generated: true
+
+========== 2. CREATE BOOKING ==========
+Request Payload: {
+  firstname: 'Harish',
+  lastname: 'Baskar',
+  totalprice: 1500,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-11-01', checkout: '2026-11-05' },
+  additionalneeds: 'Breakfast'
+}
+Create Status: 200
+Create Response: {
+  bookingid: 710,
+  booking: {
+    firstname: 'Harish',
+    lastname: 'Baskar',
+    totalprice: 1500,
+    depositpaid: true,
+    bookingdates: { checkin: '2026-11-01', checkout: '2026-11-05' },
+    additionalneeds: 'Breakfast'
+  }
+}
+Extracted Booking ID: 710
+
+========== 3. GET BOOKING ==========
+Booking ID Sent to GET: 710
+GET Status: 200
+GET Response Body: {"firstname":"Harish","lastname":"Baskar","totalprice":1500,"depositpaid":true,"bookingdates":{"checkin":"2026-11-01","checkout":"2026-11-05"},"additionalneeds":"Breakfast"}
+
+========== 4. PARTIAL UPDATE (PATCH) ==========

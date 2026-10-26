@@ -1,0 +1,31 @@
+
+[
+  {
+    "tcId": "TC001",
+    "scenario": "Valid user login",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "expectedResult": "success"
+  },
+  {
+    "tcId": "TC002",
+    "scenario": "Locked out user login",
+    "username": "locked_out_user",
+    "password": "secret_sauce",
+    "expectedResult": "Epic sadface"
+  },
+  {
+    "tcId": "TC003",
+    "scenario": "Problem user login",
+    "username": "problem_user",
+    "password": "secret_sauce",
+    "expectedResult": "success"
+  },
+  {
+    "tcId": "TC004",
+    "scenario": "Invalid password",
+    "username": "standard_user",
+    "password": "wrong_password",
+    "expectedResult": "failure"
+  }
+]

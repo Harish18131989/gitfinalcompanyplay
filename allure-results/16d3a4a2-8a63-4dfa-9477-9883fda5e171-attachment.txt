@@ -1,0 +1,16 @@
+
+========== TEST SUITE START ==========
+Harish Playwright Start: 2026-10-17T22:30:48.880Z
+
+========== TEST START ==========
+Test: using fixtures
+Start Time: 2026-10-17T22:30:52.990Z
+Login button count: 1
+End Time: 2026-10-17T22:30:55.048Z
+Duration: 2058 ms
+Status: passed
+========== TEST END ==========
+
+Harish Playwright End: 2026-10-17T22:30:55.365Z
+========== TEST SUITE END ==========
+

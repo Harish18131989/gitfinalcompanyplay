@@ -1,0 +1,16 @@
+
+========== 1. AUTHENTICATION ==========
+Auth Status: 200
+Auth Response: { token: '127173dc14ff497' }
+Token Generated: true
+
+========== 2. CREATE BOOKING ==========
+Request Payload: {
+  firstname: 'Harish',
+  lastname: 'Baskar',
+  totalprice: 1500,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-11-01', checkout: '2026-11-05' },
+  additionalneeds: 'Breakfast'
+}
+Create Status: 200
