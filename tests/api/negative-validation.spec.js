@@ -24,3 +24,4 @@ test('Negative - GET booking with invalid ID', async ({ apifix }) => {
 // Authentication	Valid token allows PATCH	Missing/invalid token rejects PATCH
 // Data integrity	PATCH value persists	Invalid update is rejected
 // Headers	JSON response header	Unsupported/invalid request where API defines rejection
+// git merge request
