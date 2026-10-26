@@ -1,0 +1,53 @@
+UI Task (Web Automation with Playwright
+• Open the website: https://www.saucedemo.com/
+• Implement all login scenarios on the web application (valid, invalid, locked out,
+etc.).
+• Implement a full product order scenario (add to cart, checkout, finish) for the logged-in
+user. Add one product to the cart
+• Support cross-browser testing (Chrome and Firefox).
+• Implement parallel execution.
+• Deliver clean, maintainable, and well-structured code.
+
+API Task (Using REST Assured):
+Use the public API:
+
+https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-
+api.md
+
+• API tests using Playwright for the Simple Books API with tricky operations (GET, POST
+with token, PATCH, DELETE).
+
+
+
+
+Create an empty folder called Ejada
+goto terminal and type npm init @playwright@latest
+choose typescript
+try running npx playwright test for sample file it will run in 6 workers
+
+for excel incorporation
+npm install xlsx
+create a testdata folder and inside that create new excel named Logindata.xlsx and sheet name as login
+
+create a utility folder and inside that have code to read excel data and it should be reusable method 
+
+
+
+create a pages folder create loginpage and declare readonly page, locators, create a constructor for initialization and initialize locators and page and then create a method for login functionality and use all the locators which has been declared in constructor
+ 
+go to test folder and  inside it have ui folder and inside it have your first temporary test creation and run it locally
+
+create a config file which should have assertion timeout, navigation, global, timeout, supports parallel with 4 workers, maximized window, take screenshot on failure, retain video on failure, trace on, forbidonly negative, supports allure report
+
+install allure by using npm install -D allure-playwright allure-commandline
+npx allure generate ./allure-results --clean -o ./allure-report to generate allure report
+npx allure open ./allure-report  to open allure report
+
+npx playwright show-trace
+drag the trace file from testresults folder
+
+
+
+create a checkouts, products page and add required locator, methods 
+
+create a test class and create objects for pages and call required methods using that objects
